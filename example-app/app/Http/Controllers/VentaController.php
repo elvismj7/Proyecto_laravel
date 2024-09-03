@@ -38,23 +38,27 @@ class VentaController extends Controller
     public function show($id)
     {
         $venta = Venta::findOrFail($id);
-        return view('ventas.verVentas', ['ventas' => $venta]);
+        $productos = Producto::all(); // Obtén todos los productos
+        return view('ventas.verVentas', [
+        'datos' => $venta,
+        'productos' => $productos // Pasa la lista de productos a la vista
+    ]);
     }
     
     public function edit($id)
     {
         $venta = Venta::findOrFail($id);
-        $productos = Producto::all();
-        return view('venta.edit', ['venta' => $venta, 'productos' => $productos]);
+        $productos = Producto::all(); // Obtén la lista de productos
+        return view('ventas.edit', ['datos' => $venta, 'productos' => $productos]);
     }
 
     public function update(Request $request, $id)
     {
         $validatedData = $request->validate([
             'ProductoID' => 'required|exists:productos,ProductoID',
-            'Cantidad' => 'required|integer|min:1',
-            'PrecioTotal' => 'required|numeric|min:0',
-            'FechaVenta' => 'required|date',
+            'cantidad' => 'required|integer|min:1',
+            'precio_total' => 'required|numeric|min:0',
+            'fecha_venta' => 'required|date',
         ]);
 
         $venta = Venta::findOrFail($id);

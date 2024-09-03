@@ -7,7 +7,7 @@
     @vite('resources/css/app.css')
 </head>
 
-<body>
+<body class="bg-light">
     @yield('cuerpo')
 
     @vite('resources/js/app.js')

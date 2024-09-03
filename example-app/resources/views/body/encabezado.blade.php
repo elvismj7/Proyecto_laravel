@@ -19,7 +19,7 @@
               <a class="nav-link text-white" href="ventas ">Ventas</a>
             </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#">Clientes</a>
+            <a class="nav-link text-white" href="cliente">Clientes</a>
           </li>
       </ul>
       <form class="d-flex" role="search">

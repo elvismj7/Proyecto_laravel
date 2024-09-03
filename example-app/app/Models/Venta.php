@@ -13,7 +13,7 @@ class Venta extends Model
     protected $fillable = ['VentasID','ProductoID','cantidad','precio_total','fecha_venta'];
 
     public function producto()
-    {
-        return $this->belongsTo(Producto::class, 'ProductoID');
-    }
+{
+    return $this->belongsTo(Producto::class, 'ProductoID');
+}
 }

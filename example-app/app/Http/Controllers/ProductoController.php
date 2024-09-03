@@ -53,7 +53,7 @@ class ProductoController extends Controller
     {
         // Mostrar el formulario de edición
         $producto = Producto::findOrFail($id);
-        return view('productos.editar', ["datos"=> $producto]);
+        return view('producto.edit', ["datos"=> $producto]);
     }
 
     public function destroy(Producto $ProductoID) {

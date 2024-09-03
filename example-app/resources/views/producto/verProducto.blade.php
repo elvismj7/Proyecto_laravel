@@ -1,4 +1,4 @@
-@extends('body.encabezado')
+
 @extends('body.cuerpo')
 
 @section('title', 'verProductos '.$datos)
@@ -6,7 +6,7 @@
 @section('cuerpo')
 <div class="container mt-5">
   <h2 class="mb-4">Editar Producto</h2>
-  <form action="{{ route('productos.update', $datos)}}" method="POST">
+  <form action="{{ route('productos.edit', $datos)}}" method="POST">
       @csrf
       @method('PUT')
       <div class="form-group">

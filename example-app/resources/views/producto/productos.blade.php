@@ -11,24 +11,26 @@
     <table class="table">
       <thead>
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">nombre</th>
-          <th scope="col">stock</th>
-          <th scope="col">Precio Unitario</th>
-          <th scope="col">Descripcion</th>
+          <th scope="col">ID</th>
+          <th scope="col">NOMBRE</th>
+          <th scope="col">STOCK</th>
+          <th scope="col">PRECIO UNITARIO</th>
+          <th scope="col">DESCRIPCION</th>
         </tr>
       </thead>
         
       <tbody>
         @foreach ($productos as $producto)
         <tr>
-            <th scope="row">1</th>
+            <th scope="row">{{$producto->ProductoID}}</th>
             <td>{{$producto->Nombre}}</td>
             <td>{{$producto->stock}}</td>
             <td>{{$producto->PrecioUnitario}}</td>
             <td>{{$producto->Descripcion}}</td>
             <td>
               <a href="{{ route('productos.show', $producto->ProductoID)}}" class="btn btn-primary">Editar</a>
+            </td>
+            <td>
               <form action="{{ route('productos.delete', $producto->ProductoID) }}" method="post">
                 @csrf
                 @method('DELETE')

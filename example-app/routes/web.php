@@ -37,7 +37,7 @@ Route::middleware('auth')->group(function (){
         Route::post('productos', 'store')->name('productos.store');
         Route::get('productos/{id}', 'show')->name('productos.show');
         Route::delete('productos/{ProductoID}', 'destroy')->name('productos.delete');
-        Route::put('productos', 'update')->name('productos.edit');
+        Route::put('productos/{ProductoID}', 'update')->name('productos.edit');
     });
 
 
@@ -47,7 +47,7 @@ Route::middleware('auth')->group(function (){
         Route::post('ventas', 'store')->name('ventas.store');
         Route::get('ventas/{id}', 'show')->name('ventas.show');
         Route::delete('ventas/{VentasID}', 'destroy')->name('ventas.delete');
-        Route::put('ventas', 'update')->name('ventas.edit');
+        Route::put('ventas/{id}', 'update')->name('ventas.edit');
     });
 
     Route::controller(ClientesController::class)->group(function () {
