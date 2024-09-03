@@ -29,7 +29,7 @@ Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 //midelware
 
 Route::middleware('auth')->group(function (){
-    Route::get('home', [InicioController::class, 'inicio'])->name('inicio');
+    Route::get('inicio', [InicioController::class, 'inicio'])->name('inicio');
 
     Route::controller(ProductoController::class)->group(function () {
         Route::get('productos', 'index')->name('productos.index');

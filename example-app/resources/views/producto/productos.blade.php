@@ -4,7 +4,7 @@
 @section('encabezado')
 
 <div class="container">
-  <h1>PRODUCTOS</h1>
+  <h1>LISTA DE PRODUCTOS</h1>
   <hr>
   <a href="{{route('productos.crear')}}" class="btn btn-primary">Agregar Producto</a>
   <hr>
@@ -16,6 +16,8 @@
           <th scope="col">STOCK</th>
           <th scope="col">PRECIO UNITARIO</th>
           <th scope="col">DESCRIPCION</th>
+          <th scope="col"> </th>
+          <th scope="col"> </th>
         </tr>
       </thead>
         

@@ -9,9 +9,6 @@
           <li class="nav-item">
               <a class="nav-link active text-white" href="inicio">Inicio</a>
           </li>
-          <li class="nav-item">
-                  <a class="nav-link text-white" href="#">Usuarios</a>
-          </li>
             <li class="nav-item">
               <a class="nav-link text-white" href="productos ">Productos</a>
             </li>
